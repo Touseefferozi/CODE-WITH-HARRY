@@ -1,0 +1,20 @@
+/* Weather Cards Container */
+.weather-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem;
+  gap: 1.5rem;
+}
+
+/* Weather Card Styles */
+.weather-card {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  flex: 1 1 200px; /* Allow cards to grow and shrink, with a base width of 200px */
+  max-width: 250px; /* Set a max width for larger screens */
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  min-width: 150px; /* Set a minimum width */
+}

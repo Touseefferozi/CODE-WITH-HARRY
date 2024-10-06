@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather for 99 Countries</title>
+    
+    
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- AOS Animations -->
+    <head>
+      <!-- Luxon for timezone handling -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/2.3.0/luxon.min.js"></script>
+      
+      <!-- AOS for animations -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
+      <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    </head>
+    
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Body Styles */
+      body {
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+        background-color: #f4f4f9;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      /* Header Styles */
+      header {
+        background: linear-gradient(to right, #4facfe, #00f2fe);
+        color: white;
+        padding: 2rem;
+        text-align: center;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      header h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+
+      header p {
+        font-size: 1.2rem;
+        font-weight: 400;
+        margin-bottom: 1.5rem;
+      }
+
+      /* Search Bar */
+      #searchBar {
+        padding: 0.75rem;
+        width: 50%;
+        max-width: 600px;
+        border: none;
+        border-radius: 30px;
+        font-size: 1rem;
+        outline: none;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      #searchBar:focus {
+        box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+      }
+
+      /* Weather Cards Container */
+      .weather-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 2rem;
+        gap: 1.5rem;
+      }
+
+      /* Weather Card Styles */
+      .weather-card {
+        background-color: #ffffff;
+        padding: 1.5rem;
+        flex: 1 1 200px; /* Responsive card */
+        max-width: 250px; /* Set max width for larger screens */
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+        min-width: 150px; /* Set minimum width */
+      }
+
+      .weather-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .weather-card h2 {
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+        color: #4facfe;
+      }
+
+      .weather-card p {
+        font-size: 1rem;
+        margin-bottom: 0.25rem;
+        color: #333;
+      }
+
+      /* Footer Styles */
+      footer {
+        background-color: #282c34;
+        color: white;
+        padding: 1rem;
+        text-align: center;
+      }
+
+      footer p {
+        margin: 0;
+        font-size: 1rem;
+      }
+
+      footer a {
+        color: #4facfe;
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      
+
+    </style>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <h1> <i> Worldwide <span>Weather</span> Tracker</i></h1>
+      <p>Stay informed with real-time weather updates from around the globe</p>
+
+      <!-- Search Bar -->
+      <input type="text" id="searchBar" placeholder="Search for a country..." />
+
+    </header>
+
+    <!-- Weather Display Section -->
+    <section id="weatherContainer" class="weather-container"></section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024 <a href="#">Touseef Ferozi</a>. All rights reserved.</p>
+    </footer>
+
+    <!-- AOS Animation Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- Luxon Library for Date/Time -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/2.0.2/luxon.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
